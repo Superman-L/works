@@ -435,15 +435,15 @@ class MYsql_ex
     }
 
     //查找用户今日是否能投票
-    public function select_user_tp_num($key_value){
-        $sql="SELECT tp_value from `tp_user` where key_value=(?)";
+    public function select_user_tp_num($user){
+        $sql="SELECT tp_value from `tp_user` where user=(?)";
         $mysqli_stmt=$this->link->prepare($sql);
         $mysqli_stmt->bind_param("s",$key_value);
         $mysqli_stmt->bind_result($tp_value);
         $res=$mysqli_stmt->execute();
         $mysqli_stmt->fetch();
         $mysqli_stmt->close();
-        return $tp_value;
+        return $user;
     }
 
     //使用今日票数
