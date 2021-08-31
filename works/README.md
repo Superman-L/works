@@ -10,7 +10,8 @@
 
 1.首先打开config/config.php,找到88行，将你的数据库填写
 
-![image-20210830174123361](C:\Users\hack\AppData\Roaming\Typora\typora-user-images\image-20210830174123361.png)
+![image](https://user-images.githubusercontent.com/59014804/131429232-2a3bb8d1-02ac-4637-a412-26067d4f046b.png)
+
 
 2.打开navicat，将目录下的sql文件导入然后删除（也可以试试命令行）
 
@@ -35,5 +36,5 @@
 **结尾**
 
 感谢大家的支持，我是阿呆
+![image](https://user-images.githubusercontent.com/59014804/131429276-497091cc-acbc-4eb7-a5c2-d22397ae9bb4.png)
 
-![image-20210831094434683](C:\Users\hack\AppData\Roaming\Typora\typora-user-images\image-20210831094434683.png)
