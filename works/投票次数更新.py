@@ -4,10 +4,13 @@ import pymysql
 while True:
     time_now=time.strftime("%H%M",time.localtime())
     print (time_now)
+    time_sleep=60-int(time_now[2:]) #需要休眠多少分钟
+    print(time_sleep)
+    wanan=time_sleep*60
     
     if time_now >= "0000" and time_now <= "0100":
         print('距离运行时间还有：',(2460-int(time_now)))
-
+        
         #连接数据库
         db = pymysql.connect(host="localhost",user="admin_root", password="root_vote", db="vote_root")
         #定义游标
@@ -18,6 +21,7 @@ while True:
             cursor.execute(update)
             print("数据更新成功")
             db.commit()#提交数据
+            time.sleep(wanan)
             continue 
 
         except:
@@ -28,8 +32,5 @@ while True:
             continue 
 
     else :
-        time_sleep=60-int(time_now[2:]) #需要休眠多少分钟
-        print(time_sleep)
-        wanan=time_sleep*60
         time.sleep(wanan)
 
