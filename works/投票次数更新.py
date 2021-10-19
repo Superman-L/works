@@ -12,7 +12,7 @@ while True:
         print('距离运行时间还有：',(2460-int(time_now)))
         
         #连接数据库
-        db = pymysql.connect(host="localhost",user="admin_root", password="root_vote", db="vote_root")
+        db = pymysql.connect(host="localhost",user="账号", password="密码", db="数据库")
         #定义游标
         cursor = db.cursor()
 
